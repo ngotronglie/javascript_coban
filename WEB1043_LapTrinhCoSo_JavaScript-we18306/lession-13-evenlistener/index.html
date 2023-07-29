@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Cach 1: Viết sự kiện vào thẻ html như 1 attribute -->
+    <button onclick="magic()">Magic</button>
+    <button class="btn-magic-2">Magic 2</button>
+    <button class="btn-magic-3">Magic 3</button>
+    <h2 class="welcome">
+      Chao cac ban!
+      <p>sdsdsdsd</p>
+      <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+      </ol>
+    </h2>
+
+    <script>
+      const h2Element = document.querySelector("h2.welcome");
+      const btn2Element = document.querySelector(".btn-magic-2");
+      const btn3Element = document.querySelector(".btn-magic-3");
+
+      console.log(btn2Element);
+      console.log(h2Element);
+      // console.log(h2Element.innerText);
+      // console.log(h2Element.innerHTML);
+      function magic() {
+        h2Element.innerText = "Tam biet cac ban!";
+      }
+
+      // Cach2: Chỉ định sự kiện bằng JS
+      btn2Element.onclick = magic;
+
+      // Cách 3: Chỉ định sự kiện bằng key: addEventListener
+      btn3Element.addEventListener("click", magic);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lession 11</title>
+    <style>
+      h2.kieumoi {
+        color: blueviolet;
+        padding: 10px;
+        border: 2px solid red;
+        border-radius: 8px;
+        background-color: yellow;
+        font-size: 40px;
+        transition: all ease-in-out 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>Add, remove, create Element</li>
+      <li>Change style</li>
+      <li>ClassList: add, remove, toggle class</li>
+      <li>Hệ thống kiến thức</li>
+    </ol>
+    <!-- <button onclick="hello()">Bắt đầu!</button>
+    <button onclick="goodbye()">Kết thúc!</button> -->
+    <h2>Chao cac ban!</h2>
+    <button onclick="changeStyle()">Đổi kiểu cho h2</button>
+    <button onclick="changeStyleKieuMoi()">Cách mới</button>
+    <button onclick="changeStyleKieuMoiRemove()">Xoá Cách mới</button>
+    <button onclick="toggle()">Change Class</button>
+    <script>
+      // const bodyElement = document.getElementsByTagName("body")[0];
+      // const h2Element = document.createElement("h2");
+      // h2Element.innerHTML = "Chao cac ban!";
+
+      // function hello() {
+      //   bodyElement.appendChild(h2Element);
+      // }
+      // function goodbye() {
+      //   bodyElement.removeChild(h2Element);
+      // }
+      const h2Element = document.getElementsByTagName("h2")[0];
+
+      function changeStyle() {
+        h2Element.style.color = "blueviolet";
+        h2Element.style.padding = "10px";
+        h2Element.style.border = "2px solid red";
+        h2Element.style.borderRadius = "8px";
+        h2Element.style.backgroundColor = "yellow";
+        h2Element.style.fontSize = "40px";
+        h2Element.style.transition = "all ease-in-out 2s";
+      }
+
+      function changeStyleKieuMoi() {
+        h2Element.classList.add("kieumoi");
+      }
+      function changeStyleKieuMoiRemove() {
+        h2Element.classList.remove("kieumoi");
+      }
+
+      function toggle() {
+        h2Element.classList.toggle("kieumoi");
+      }
+    </script>
+  </body>
+</html>

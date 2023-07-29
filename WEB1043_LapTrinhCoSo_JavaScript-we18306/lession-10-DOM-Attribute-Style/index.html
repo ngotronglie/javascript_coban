@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lession 10</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <button onclick="changeH2()">Thay đổi nội dung thẻ H2</button>
+    <h2>DOM</h2>
+    <h3>Xin chào cả lớp!</h3>
+    <button onclick="goodbye()">Hết giờ!</button>
+    <button onclick="changeStyle()">Đổi kiểu</button>
+
+    <ol id="danhSachBaiHoc" class="list">
+      <li class="item">DOM</li>
+      <li class="item">Text</li>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+    </ol>
+    <ol class="list"></ol>
+    <p class="para">param 1</p>
+
+    <div class="container">
+      <div class="itemWork">
+        <p class="para">param 2</p>
+      </div>
+    </div>
+
+    <script>
+      // const listElement = document.getElementsByClassName("list")[0];
+      // const listElement = document.getElementById("danhSachBaiHoc");
+      // const listElement = document.getElementsByTagName("ol")[0];
+      // const listElement = document.querySelector("#danhSachBaiHoc");
+      const listElement = document.querySelectorAll(".list")[0];
+      // const paraElement = document.querySelector(
+      //   ".container > .itemWork > .para"
+      // );
+
+      // console.log(paraElement);
+      // console.log(listElement);
+      const h2Element = document.getElementsByTagName("h2")[0];
+      // console.log(h2Element);
+      // console.log(h2Element.innerHTML);
+      // console.log(h2Element.innerText);
+      // setTimeout(function () {
+      //   h2Element.innerHTML = "Chào các bạn!";
+      // }, 3000);
+
+      function changeH2() {
+        h2Element.innerHTML = "Chào các bạn!";
+      }
+      const h3Element = document.getElementsByTagName("h3")[0];
+      function goodbye() {
+        h3Element.innerText = "Chào tạm biệt cả lớp!";
+      }
+      function changeStyle() {
+        h3Element.style.color = "blueviolet";
+        h3Element.style.padding = "10px";
+        h3Element.style.border = "2px solid red";
+        h3Element.style.borderRadius = "8px";
+        h3Element.style.backgroundColor = "yellow";
+        h3Element.style.fontSize = "40px";
+        h3Element.style.transition = "all ease-in-out 2s";
+      }
+    </script>
+  </body>
+</html>
